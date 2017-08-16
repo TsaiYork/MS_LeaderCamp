@@ -25,9 +25,13 @@ namespace FB_ChatBot.Dialogs
             // return our reply to the user
             //await context.PostAsync($"You sent {activity.Text} which was {length} characters");
             if(activity.Text == "你好")
-                await context.PostAsync($"Hello，你可以問我關於領袖營的問題喔");
+                await context.PostAsync($"Hello，我是AI公主，你可以問我關於領袖營的問題喔");
+            else if(activity.Text == "你好漂亮")
+                await context.PostAsync($"嘴巴真甜，給你一個讚");
+            else if (activity.Text == "笨")
+                await context.PostAsync($"已讀不回");
             else
-                await context.PostAsync($"工程師還在開發中...");
+                await context.PostAsync($"工程師還在賣肝開發中...");
 
             context.Wait(MessageReceivedAsync);
         }
